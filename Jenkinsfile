@@ -4,6 +4,13 @@ pipeline {
         maven 'Maven'
     }
     stages {
+        stage('Clean')
+        {
+             steps {
+                    bat 'mvn clean'
+                
+            }
+        }
         stage('Compile')
         {
              steps {
