@@ -1,18 +1,20 @@
 pipeline {
-    agent any 
+    agent any
+    tools{
+    }
     stages {
-        stage('Git')
+        stage('Compile')
         {
-            steps{
-            git branch: 'master' , url : 'https://github.com/RaviTeja-Manepalli/PassportApplication.git'
-
+             steps {
+                    sh 'mvn compile'
+                
             }
         }
-        stage('Build') {
+       
+        stage('Package') {
             steps {
-                dir ('C:/Windows/System32/config/systemprofile/AppData/Local/Jenkins/.jenkins/workspace/pipeline3'){
                     sh 'mvn package'
-                }
+                
             }
         }
         stage('Test') { 
