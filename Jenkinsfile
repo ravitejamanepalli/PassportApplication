@@ -4,7 +4,8 @@ pipeline {
         stage('Git')
         {
             steps{
-            git branch: 'master' url : 'https://github.com/RaviTeja-Manepalli/PassportApplication.git'
+            git branch: 'master' , url : 'https://github.com/RaviTeja-Manepalli/PassportApplication.git'
+
             }
         }
         stage('Build') {
