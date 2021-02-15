@@ -1,8 +1,6 @@
 pipeline {
     agent any 
-    environment{
-        PATH="C:\Program Files\Jenkins"
-    }
+   
     stages {
         stage('Build') {
             steps {
