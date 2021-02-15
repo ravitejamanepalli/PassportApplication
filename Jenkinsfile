@@ -1,5 +1,8 @@
 pipeline {
     agent any 
+    environment{
+        PATH ="\WINDOWS\system32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace"
+    }
    
     stages {
         stage('Build') {
