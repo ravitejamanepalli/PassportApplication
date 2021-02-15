@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     environment{
-        PATH : "Windows/System32/config/systemprofile/AppData/Local/Jenkins/.jenkins/jenkins-jobs:$PATH"
+        PATH : "/Windows/System32/config/systemprofile/AppData/Local/Jenkins/.jenkins/jenkins-jobs:$PATH"
     }
    
     stages {
