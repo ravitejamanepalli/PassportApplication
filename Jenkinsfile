@@ -10,7 +10,9 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'mvn package'
+                dir ('C:/Windows/System32/config/systemprofile/AppData/Local/Jenkins/.jenkins/workspace/pipeline3'){
+                    sh 'mvn package'
+                }
             }
         }
         stage('Test') { 
